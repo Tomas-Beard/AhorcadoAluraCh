@@ -1,0 +1,205 @@
+:root {
+  --main-color: #0a3871;
+}
+
+body {
+  background: #d3d4d6;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+  width: inherit;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Helvetica Black;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  column-gap: calc(100% - 68%);
+  margin-bottom: 1%;
+}
+
+#img-logo-alura {
+  margin-left: 1%;
+}
+
+.tablero-horcado {
+  background: rgb(10, 70, 13);
+  border: 10px solid #4e2004;
+  margin: 0 auto;
+  display: block;
+}
+
+#iniciar-juego {
+  width: 250px;
+  height: 75px;
+}
+
+#agregar-nueva-palabra {
+  width: 200px;
+  height: 60px;
+}
+
+.boton-azul {
+  background: var(--main-color);
+  width: 250px;
+  height: 50px;
+  color: #e5e5e5;
+  border-radius: 20px;
+  border: 1px solid var(--main-color);
+  margin: 25px;
+  transition: all 0.5s;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.boton-azul:hover {
+  background: #e5e5e5;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  transform: scale(1.1);
+}
+
+.boton-blanco {
+  background: #e5e5e5;
+  width: 250px;
+  height: 50px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  margin: 25px;
+  transition: all 0.5s;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.boton-blanco:hover {
+  background: var(--main-color);
+  color: #e5e5e5;
+  transform: scale(1.1);
+}
+
+.botones-en-columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#palabra-secreta-a-agregar {
+  background: #f3f5fc;
+  border: none;
+  width: 200px;
+  height: 40px;
+  font-size: larger;
+  outline: none;
+}
+
+::placeholder {
+  color: var(--main-color);
+  font-size: large;
+}
+
+#aclaracion-maximo-letras {
+  position: relative;
+  margin: 20px;
+  right: 170px;
+  top: 35px;
+  color: var(--main-color);
+}
+
+.botones-de-costado {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#mensajes-al-usuario {
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--main-color);
+}
+
+#modal {
+  max-width: 400px;
+  max-height: 300px;
+  color: var(--main-color);
+  background: #e5e5e5;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+#mensaje-de-modal {
+  margin-top: 15px;
+}
+
+footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+footer > label {
+  margin-right: 35px;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman";
+  font-size: xx-large;
+}
+
+a:hover {
+  border-bottom: 2px solid;
+}
+
+a:active {
+  color: var(--main-color);
+}
+
+.oculto {
+  display: none;
+}
+
+.error {
+  border: solid red 4px;
+}
+
+@media (max-width: 760px) {
+  body {
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 0px;
+  }
+  #img-logo-alura {
+    margin-top: 1%;
+  }
+  .tablero-horcado {
+    margin-top: 1%;
+    width: 75%;
+    height: 75%;
+  }
+  #contenedor-nuevo-juego-desistir {
+    padding-top: 1%;
+  }
+}
